@@ -34,4 +34,13 @@ if (keyboard_check_released(vk_down)) {
 
 if (keyboard_check_pressed(ord("Z"))){
         instance_create_layer(x, y, "Instances", obj_sword);
+		if (sprite_index == sBob_Up_Idle) {
+			obj_sword.image_angle = 90;
+		}
+		if (sprite_index == sBob_Left_Idle) {
+			obj_sword.image_angle = 180;
+		}
+		if (sprite_index == sBob_Down_Idle) {
+			obj_sword.image_angle = 270;
+		}
     }
